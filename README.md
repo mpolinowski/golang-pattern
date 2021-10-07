@@ -9,6 +9,8 @@
         - [Basic Example](#basic-example)
         - [Thread-safe Example](#thread-safe-example)
 - [Structural](#structural)
+    - [Adapter](#adapter)
+    - [Facade](#facade)
 - [Behavioural](#behavioural)
 
 <!-- /TOC -->
@@ -160,8 +162,67 @@ And this makes sure that the creation step only runs once, even if there are con
 
 ## Structural
 
-* Adapter
-* Facade
+### Adapter
+
+> The __Adapter Pattern__ allows you to use an existing interface of an API as another interface without modifying the original API.
+
+Example use case: adapting legacy code to a new API - e.g. integrating an old media center software into a new environment. The adapter allows us to send the same commands to each device to get the same, desired result:
+
+
+```bash
+go run ./Structural/Adapter/*.go
+
+XBMC is On
+XBMC Volume: 34
+XBMC Volume: 35
+XBMC Channel: 98
+XBMC Channel: 97
+XBMC Channel: 98
+XBMC Channel: 1
+XBMC is Off
+-----------------------
+OSMC is On
+OSMC Volume is: 11
+Setting OSMC Volume to: 10
+OSMC Volume is: 10
+Setting OSMC Volume to: 11
+OSMC channel is: 21
+Setting OSMC Channel to: 20
+OSMC channel is: 20
+Setting OSMC Channel to: 19
+OSMC channel is: 19
+Setting OSMC Channel to: 20
+Setting OSMC Channel to: 21
+OSMC is Off
+```
+
+### Facade
+
+> The __Facade Pattern__ adds a simpler access point to your system hiding a more complex, low-level API.
+
+
+```bash
+go run ./Structural/Facade/*.go
+
+Preparing an Americano
+----------------------
+Order for coffee with 146.875 grams of beans and grind level 6 .
+Grinding 146.875 grams of beans at level 6 .
+Adding 235 mL of hot water.
+Not adding milk foam.
+Order processed.
+Americano is ready
+
+Preparing a Latte
+----------------------
+Order for coffee with 131.25 grams of beans and grind level 2 .
+Grinding 131.25 grams of beans at level 2 .
+Adding 350 mL of hot water.
+Adding 87.5 mL of milk.
+Adding milk foam.
+Order processed.
+Latte is ready
+```
 
 
 ## Behavioural
