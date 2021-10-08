@@ -286,4 +286,17 @@ Published: 2021
 
 #### Pull Model Iteration
 
-__WIP__
+
+```bash
+go run ./Behavioral/Iterator/Interface/*.go
+
+Book &{Name:Leviathan Wakes Year:2011 PageCount:592 ISBN:978-0-316-12908-4 Type:0}
+Book &{Name:Caliban's War Year:2012 PageCount:595 ISBN:978-1-841-49990-1 Type:1}
+Book &{Name:Abaddon's Gate Year:2013 PageCount:539 ISBN:978-0-316-12907-7 Type:0}
+Book &{Name:Cibola Burn Year:2014 PageCount:583 ISBN:978-0-316-21762-0 Type:2}
+Book &{Name:Nemesis Games Year:2015 PageCount:544 ISBN:978-0-316-21758-3 Type:0}
+Book &{Name:Babylon's Ashes Year:2016 PageCount:608 ISBN:978-0-316-33474-7 Type:0}
+Book &{Name:Persepolis Rising Year:2017 PageCount:560 ISBN:978-0-316-33283-5 Type:0}
+Book &{Name:Tiamat's Wrath Year:2019 PageCount:544 ISBN:978-0-316-33286-6 Type:0}
+Book &{Name:Leviathan Falls Year:2021 PageCount:528 ISBN:978-0-356-51039-2 Type:3}
+```

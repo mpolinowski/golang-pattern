@@ -40,9 +40,6 @@ func (l *Library) IterateBooks(f func(Book) error) {
 	}
 }
 
-// Create an iterator that can access the book collection on demand
-
-
 
 // Create library structure
 

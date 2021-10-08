@@ -13,8 +13,6 @@ func main() {
 		return nil
 	})
 
-	// Create iterator
-
 }
 
 // Callback function to process each book that
@@ -23,3 +21,4 @@ func myBookCallback(b Book) error {
 	fmt.Println("Book title:", b.Name)
 	return nil
 }
+
