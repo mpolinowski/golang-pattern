@@ -12,6 +12,10 @@
     - [Adapter](#adapter)
     - [Facade](#facade)
 - [Behavioural](#behavioural)
+    - [Observer](#observer)
+    - [Iterator](#iterator)
+        - [Callback Iteration](#callback-iteration)
+        - [Pull Model Iteration](#pull-model-iteration)
 
 <!-- /TOC -->
 
@@ -227,5 +231,59 @@ Latte is ready
 
 ## Behavioural
 
-* Iterator
-* Observer
+### Observer
+
+> The __Observer Pattern__ introduces a Pub/Sub architecture where an object (__Subject__) maintains a list of other objects (__Observers__) that it needs to notify about changes. 
+
+
+```bash
+go run ./Behavioural/Observer/*.go
+
+Brother Number One was registered
+Brother Number Two was registered
+Brother Number One received update: Update 1
+Brother Number Two received update: Update 1
+Brother Number One received update: Update 2
+Brother Number Two received update: Update 2
+Brother Number One received update: Update 3
+Brother Number Two received update: Update 3
+Brother Number One was deregistered
+Brother Number Two received update: Update 4
+```
+
+
+### Iterator
+
+> The __Iterator Pattern__ iterates over the elements inside an object without exposing the underlying implementation of the container
+
+
+#### Callback Iteration
+
+The library data is pushed to the callBack and then processed:
+
+```bash
+go run ./Behavioral/Iterator/Callback/*.go
+
+Book title: Leviathan Wakes
+Book title: Caliban's War
+Book title: Abaddon's Gate
+Book title: Cibola Burn
+Book title: Nemesis Games
+Book title: Babylon's Ashes
+Book title: Persepolis Rising
+Book title: Tiamat's Wrath
+Book title: Leviathan Falls
+Published: 2011
+Published: 2012
+Published: 2013
+Published: 2014
+Published: 2015
+Published: 2016
+Published: 2017
+Published: 2019
+Published: 2021
+```
+
+#### Pull Model Iteration
+
+__WIP__
